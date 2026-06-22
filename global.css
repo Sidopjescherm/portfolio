@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Metropolis';
+    src: url(fonts/Metropolis-Regular.otf) format('otf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis-bold';
+    src: url(fonts/Metropolis-Bold.otf) format('otf');
+    font-weight: 800;
+    font-display: swap;
+}
+
+:root {
+    --font-text: 'Metropolis'; 
+    --font-link: 'Metropolis-bold';
+    --font-italic: 'Metropolis-italic';
+
+    color-scheme: light dark;
+    --universal-light: hsl(45 29 97);
+    --universal-dark: hsl(0 0 10);
+    --universal-green: hsl(118 72 36);
+}
+
+body {
+    background-color: light-dark(var(--universal-light), var(--universal-dark));
+    color: light-dark(var(--universal-dark), var(--universal-light));
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: var(--font-text);
+}
