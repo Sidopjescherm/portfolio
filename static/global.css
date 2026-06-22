@@ -1,21 +1,16 @@
 @font-face {
     font-family: 'Metropolis';
-    src: url(fonts/Metropolis-Regular.otf) format('otf');
-    font-style: normal;
-    font-display: swap;
+    src: url('fonts/Metropolis-Regular.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'Metropolis-bold';
-    src: url(fonts/Metropolis-Bold.otf) format('otf');
-    font-weight: 800;
-    font-display: swap;
+    font-family: 'Metro-bold';
+    src: url('fonts/Metropolis-Bold.otf') format('opentype');
 }
 
 :root {
     --font-text: 'Metropolis'; 
-    --font-link: 'Metropolis-bold';
-    --font-italic: 'Metropolis-italic';
+    --font-link: 'Metro-bold';
 
     color-scheme: light dark;
     --universal-light: hsl(45 29 97);
@@ -30,4 +25,16 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     font-family: var(--font-text);
+}
+
+p {
+    font-size: 1rem;
+    @media (prefers-color-scheme: dark) {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+}
+
+a {
+    font-family: var(--font-link);      
 }
