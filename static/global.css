@@ -23,11 +23,11 @@ body {
     color: light-dark(var(--universal-dark), var(--universal-light));
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, li {
     font-family: var(--font-text);
 }
 
-p {
+p, li {
     font-size: 1rem;
     @media (prefers-color-scheme: dark) {
         font-size: 1.125rem;
@@ -35,6 +35,9 @@ p {
     }
 }
 
-a {
-    font-family: var(--font-link);      
+a, a:link, a:visited {
+    font-family: var(--font-link);  
+    color: light-dark(var(--universal-dark), var(--universal-light));
 }
+
+
