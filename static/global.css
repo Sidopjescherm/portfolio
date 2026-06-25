@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Metropolis';
+    src: url('fonts/Metropolis-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Metro-bold';
+    src: url('fonts/Metropolis-Bold.otf') format('opentype');
+}
+
+:root {
+    --font-text: 'Metropolis'; 
+    --font-link: 'Metro-bold';
+
+    color-scheme: light dark;
+    --universal-light: hsl(45 29 97);
+    --universal-dark: hsl(0 0 10);
+    --universal-green: hsl(118 72 36);
+}
+
+body {
+    background-color: light-dark(var(--universal-light), var(--universal-dark));
+    color: light-dark(var(--universal-dark), var(--universal-light));
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    font-family: var(--font-text);
+}
+
+p, li {
+    font-size: 1rem;
+    @media (prefers-color-scheme: dark) {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+}
+
+a, a:link, a:visited {
+    font-family: var(--font-link);  
+    color: light-dark(var(--universal-dark), var(--universal-light));
+}
+
+
