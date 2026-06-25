@@ -9,14 +9,16 @@
     <body>
         <main>
             <article>
-                <h1>Hey Hallo!</h1>
-                <p>
-                    A Dutch double greeting I frequently use to greet
-                    my fellow humans. Speaking of fellow humans, I've helped a
-                    few of them to create their projects, themselves or their
-                    organizations on the web! Now you can see what things
-                    I've made OR you can see what I can do for you!
-                </p>
+                <hgroup>
+                    <h1>Hey Hallo!</h1>
+                    <p>
+                        A Dutch double greeting I frequently use to greet
+                        my fellow humans. Speaking of fellow humans, I've helped a
+                        few of them to create their projects, themselves or their
+                        organizations on the web! Now you can see what things
+                        I've made OR you can see what I can do for you!
+                    </p>
+                </hgroup>
             </article>
         
             <article>
@@ -46,21 +48,14 @@
                     mostly myself. Here you'll find some of the websites I'm pleased
                     to show!
                 </p>
-        
-                <ul>
-                    <li>
-                        <a href="https://adconnect.dev.fdnd.nl/">ADconnect</a>
-                    </li>
-                    <li>
-                        <a href="https://air-pollution-africa.netlify.app/">Air-pollution Africa</a>
-                    </li>
-                    <li>
-                        <a href="https://oncollaboration.dev.fdnd.nl/">Oncollaboration</a>
-                    </li>
-                    <li>
-                        <a href="https://my-rainbow-connection.netlify.app/">blog site</a>
-                    </li>
-                </ul>
+
+                <nav>
+
+                    <a href="https://adconnect.dev.fdnd.nl/">ADconnect</a>
+                    <a href="https://air-pollution-africa.netlify.app/">Air-pollution Africa</a>
+                    <a href="https://oncollaboration.dev.fdnd.nl/">Oncollaboration</a>
+                    <a href="https://my-rainbow-connection.netlify.app/">blog site</a>
+                </nav>
             </article>
         </main>
 
@@ -93,6 +88,18 @@
 
         p {
             width: clamp(80%, 100%, 100vh);
+        }
+    }
+
+    address {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    a {
+        &:not(:hover) {
+            opacity: .5;
         }
     }
 </style>
